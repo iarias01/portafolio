@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Sansation_Regular";
+  src: url("./assets/fonts/Sansation_Regular.ttf") format("opentype");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sansation_Regular", sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_rotate {
+  0% {
+    transform: rotateY(1440deg);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes traslate_name_left {
+  0% {
+    transform: translateX(-2000px) rotateY(720deg);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes traslate_name_rigth {
+  0% {
+    transform: translateX(+2000px) rotateY(720deg);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes desplegar {
+  0% {
+    opacity: 0;
+    z-index: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes desplegar2 {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
