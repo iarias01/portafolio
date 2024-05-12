@@ -13,6 +13,7 @@
   padding: 14px;
   margin: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  animation: fadeIn_size ease 2s;
   &__img {
     width: calc(100% + 28px);
     margin-top: -14px;

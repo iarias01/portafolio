@@ -18,21 +18,18 @@ export class AppComponent {
       .pipe(take(1))
       .subscribe((data: any) => {
         this.portafolios = data;
-        console.log(data);
       });
     this.getJson
       .getSkills()
       .pipe(take(1))
       .subscribe((data: any) => {
         this.skills = data;
-        console.log(data);
       });
     this.getJson
       .getActivities()
       .pipe(take(1))
       .subscribe((data: any) => {
         this.activities = data;
-        console.log(data);
       });
   }
 }

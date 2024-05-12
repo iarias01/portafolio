@@ -35,6 +35,35 @@ html {
   }
 }
 
+@keyframes fadeIn_size {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  90% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_size_rotate {
+  0% {
+    scale: 0;
+    opacity: 0;
+    transform: rotateY(1440deg);
+  }
+  90% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
 @keyframes traslate_name_left {
   0% {
     transform: translateX(-2000px) rotateY(720deg);
@@ -66,6 +95,20 @@ html {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes profile {
+  0% {
+    transform: scaleX(-1) translate(-50px);
+    opacity: 0;
+  }
+  90% {
+    transform: scaleX(-1) translate(310px);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(-1) translate(0);
   }
 }
 

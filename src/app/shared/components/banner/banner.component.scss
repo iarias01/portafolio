@@ -1,6 +1,10 @@
 .banner {
   text-align: center;
   position: relative;
+  h1,
+  h2 {
+    z-index: 1;
+  }
 }
 .yo {
   width: 400px;
@@ -8,6 +12,7 @@
   bottom: 0;
   right: 90px;
   transform: scaleX(-1);
+  animation: profile ease 2s;
 }
 
 .monitor {
