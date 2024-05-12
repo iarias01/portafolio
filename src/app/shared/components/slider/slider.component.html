@@ -1,0 +1,26 @@
+<div class="slider">
+  <div class="slider-container">
+    <div #slider class="slider-body">
+      <div class="slide" *ngFor="let item of elements; let index = index">
+        <ng-container
+          [ngTemplateOutlet]="templateHtml"
+          [ngTemplateOutletContext]="{
+            item: item,
+            index: index
+          }"
+        ></ng-container>
+      </div>
+    </div>
+  </div>
+
+  <button class="prev-button" (click)="prevSlide()" *ngIf="currentIndex > 0">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button
+    class="next-button"
+    (click)="nextSlide()"
+    *ngIf="currentIndex < elements.length - 1"
+  >
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>

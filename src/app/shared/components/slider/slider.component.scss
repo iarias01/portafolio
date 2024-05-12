@@ -1,0 +1,73 @@
+.slider {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out; // Añadimos una transición para el efecto suave
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.slider-body {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: fit-content;
+  max-width: 100%;
+  cursor: grab;
+}
+.grabbing {
+  cursor: grabbing;
+}
+
+.slide {
+  height: auto;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+}
+
+.slide-item {
+  display: inline-block;
+  width: 400px;
+}
+
+.prev-button,
+.next-button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+  border-radius: 50%;
+  &:hover {
+    background: var(--tul-color-anti-flash-white);
+  }
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
