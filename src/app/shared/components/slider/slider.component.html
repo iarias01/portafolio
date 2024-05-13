@@ -16,10 +16,25 @@
   <button class="prev-button" (click)="prevSlide()" *ngIf="currentIndex > 0">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
+
   <button
-    class="next-button"
+    class="next-button button-lg"
+    (click)="nextSlide()"
+    *ngIf="currentIndex < elements.length - 2"
+  >
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+  <button
+    class="next-button button-md"
     (click)="nextSlide()"
     *ngIf="currentIndex < elements.length - 1"
+  >
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+  <button
+    class="next-button button-xs"
+    (click)="nextSlide()"
+    *ngIf="currentIndex < elements.length"
   >
     <i class="fa-solid fa-chevron-right"></i>
   </button>

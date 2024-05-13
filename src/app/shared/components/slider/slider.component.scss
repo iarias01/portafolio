@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .slider {
   display: flex;
   align-items: center;
@@ -70,4 +72,38 @@
 
 .next-button {
   right: 0;
+}
+
+.button-lg {
+  display: flex;
+}
+.button-md {
+  display: none;
+}
+.button-xs {
+  display: none;
+}
+
+@media (max-width: $breackpoint-cel) {
+  .button-lg {
+    display: none;
+  }
+  .button-md {
+    display: flex;
+  }
+  .button-xs {
+    display: none;
+  }
+}
+
+@media (max-width: $breackpoint-table) {
+  .button-lg {
+    display: none;
+  }
+  .button-md {
+    display: none;
+  }
+  .button-xs {
+    display: flex;
+  }
 }

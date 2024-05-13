@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .banner {
   text-align: center;
   position: relative;
@@ -26,6 +28,7 @@
   background-color: #f1901c;
   animation: fadeIn_rotate ease 2s;
   position: relative;
+  margin-top: 10px;
 }
 
 #underscore {
@@ -63,5 +66,39 @@
   h2 {
     animation: traslate_name_rigth ease 2s;
     transition: all 2s;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $breackpoint-table) {
+  .yo {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    transform: scaleX(-1);
+    animation: profile ease 2s;
+  }
+}
+
+@media (max-width: $breackpoint-cel) {
+  .yo {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    transform: scaleX(-1);
+    animation: profile ease 2s;
+  }
+}
+
+@media (max-width: 500px) {
+  .yo {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    transform: scaleX(-1);
+    animation: profile ease 2s;
   }
 }
