@@ -1,23 +1,32 @@
 <nav class="navigation">
-  <!--<button class='btn btn-md btn_toggle' onclick='ToggleBar();'><img src="iconos/menu.png" alt="" width="25px;"></button>-->
   <div class="options" id="options">
+    <button class="btn_toggle" (click)="showMenu = !showMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="component">
-      <input class="hiden" id="btn_portafolio" type="radio" name="option" />
-      <label class="component-item" for="btn_portafolio">
-        <a href="#section_portafolio">Portafolio</a>
-      </label>
-      <input class="hiden" id="btn_skill" type="radio" name="option" />
-      <label class="component-item" for="btn_skill">
-        <a href="#section_skills">Skill Set</a>
-      </label>
-      <input class="hiden" id="btn_activities" type="radio" name="option" />
-      <label class="component-item" for="btn_activities">
-        <a href="#section_activities">Activities</a>
-      </label>
-      <input class="hiden" id="btn_contact" type="radio" name="option" />
-      <label class="component-item" for="btn_contact">
-        <a href="#footer_contact">Contact</a>
-      </label>
+      <ng-container *ngTemplateOutlet="links"></ng-container>
+    </div>
+    <div class="menu menu--hiden" [ngClass]="{ 'menu--show': showMenu }">
+      <ng-container *ngTemplateOutlet="links"></ng-container>
     </div>
   </div>
 </nav>
+
+<ng-template #links>
+  <input class="hiden" id="btn_portafolio" type="radio" name="option" />
+  <label class="component-item" for="btn_portafolio">
+    <a href="#section_portafolio">Portafolio</a>
+  </label>
+  <input class="hiden" id="btn_skill" type="radio" name="option" />
+  <label class="component-item" for="btn_skill">
+    <a href="#section_skills">Skill Set</a>
+  </label>
+  <input class="hiden" id="btn_activities" type="radio" name="option" />
+  <label class="component-item" for="btn_activities">
+    <a href="#section_activities">Activities</a>
+  </label>
+  <input class="hiden" id="btn_contact" type="radio" name="option" />
+  <label class="component-item" for="btn_contact">
+    <a href="#footer_contact">Contact</a>
+  </label>
+</ng-template>

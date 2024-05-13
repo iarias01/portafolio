@@ -1,5 +1,6 @@
+@import "../../../../styles.scss";
+
 .navigation {
-  overflow-x: hidden;
   width: 100%;
   min-height: 60px;
   background: #0d1822;
@@ -23,9 +24,30 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
+.menu {
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  left: -100px;
+  transition: all 0.4s;
+  z-index: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(3, 4, 4, 1) 0%,
+    rgba(49, 62, 68, 1) 100%
+  );
+  &--hiden {
+    display: none;
+  }
+  &--show {
+    left: 0;
+  }
+}
+
 .options {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -67,4 +89,34 @@
 }
 .hiden {
   display: none;
+}
+
+.btn_toggle {
+  display: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  transition: all 0.3s;
+  &:hover {
+    color: #222;
+    background-color: #ddd;
+  }
+}
+@media (max-width: $breackpoint-cel) {
+  .btn_toggle {
+    display: block;
+  }
+  .component {
+    display: none;
+  }
+  .menu {
+    &--hiden {
+      display: block;
+    }
+  }
 }
