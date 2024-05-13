@@ -15,18 +15,22 @@
 <ng-template #links>
   <input class="hiden" id="btn_portafolio" type="radio" name="option" />
   <label class="component-item" for="btn_portafolio">
-    <a href="#section_portafolio">Portafolio</a>
+    <a href="#section_portafolio" (click)="setMenu('btn_portafolio')"
+      >Portafolio</a
+    >
   </label>
   <input class="hiden" id="btn_skill" type="radio" name="option" />
   <label class="component-item" for="btn_skill">
-    <a href="#section_skills">Skill Set</a>
+    <a href="#section_skills" (click)="setMenu('btn_skill')">Skill Set</a>
   </label>
   <input class="hiden" id="btn_activities" type="radio" name="option" />
   <label class="component-item" for="btn_activities">
-    <a href="#section_activities">Activities</a>
+    <a href="#section_activities" (click)="setMenu('btn_activities')"
+      >Activities</a
+    >
   </label>
   <input class="hiden" id="btn_contact" type="radio" name="option" />
   <label class="component-item" for="btn_contact">
-    <a href="#footer_contact">Contact</a>
+    <a href="#footer_contact" (click)="setMenu('btn_contact')">Contact</a>
   </label>
 </ng-template>

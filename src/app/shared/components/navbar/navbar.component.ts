@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   showMenu = false;
-  ToggleBar() {}
+
+  setMenu(id: string) {
+    this.showMenu = false;
+    document.getElementById(id)!.click();
+  }
 }

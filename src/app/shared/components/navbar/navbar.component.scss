@@ -25,7 +25,7 @@
 }
 
 .menu {
-  * {
+  .component-item a {
     text-align: left !important;
   }
   width: 90px;
@@ -69,9 +69,9 @@
     margin: auto 0;
     padding: 0;
     cursor: pointer;
+    transition: all 700ms;
     &:hover {
       background: #334557;
-      transition: all 700ms;
     }
     a {
       display: flex;
@@ -92,6 +92,9 @@
 }
 .hiden {
   display: none;
+  &:checked + .component-item {
+    background-color: #58748f;
+  }
 }
 
 .btn_toggle {
