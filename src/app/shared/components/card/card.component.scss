@@ -47,6 +47,17 @@
   &--animation {
     animation: fadeIn_size ease 2s;
   }
+  &__responsive {
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    .fa-circle-check {
+      color: #23bd68;
+    }
+    .fa-circle-xmark {
+      color: #e76767;
+    }
+  }
   &__img {
     width: calc(100% + 28px);
     margin-top: -14px;
