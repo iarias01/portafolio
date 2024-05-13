@@ -1,4 +1,8 @@
-<div class="card">
+<div
+  class="card"
+  [ngClass]="{ 'card--on-modal': onModal, 'card--animation': !onModal }"
+  *ngIf="data"
+>
   <div class="">
     <img
       class="card__img"
@@ -8,5 +12,16 @@
     <h1 class="card__title">{{ data.title }}</h1>
     <p class="card__description">{{ data.preview_description }}</p>
   </div>
-  <button class="card__btn">Read more</button>
+  <button class="card__btn" *ngIf="!onModal" (click)="selectItem.emit(data)">
+    Read more
+  </button>
+  <div class="actions" *ngIf="onModal && data.link">
+    <a class="card__btn" [href]="data.link" target="_blank">Visit website</a>
+    <a
+      class="btn-close"
+      (click)="closeModal.emit()"
+      style="background-color: aliceblue"
+      >Close modal</a
+    >
+  </div>
 </div>

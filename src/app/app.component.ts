@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { JsonService } from './services/json.service';
 import { take } from 'rxjs';
+import { ESizeModal } from './shared/components/modal/modal-size.enum';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,9 @@ export class AppComponent {
   portafolios: any[] = [];
   skills: any[] = [];
   activities: any[] = [];
+  showModal = false;
+  item: any = undefined;
+  sizeModal = ESizeModal;
 
   constructor(private getJson: JsonService) {
     this.getJson
@@ -31,5 +35,9 @@ export class AppComponent {
       .subscribe((data: any) => {
         this.activities = data;
       });
+  }
+  setItem(item: any) {
+    this.item = item;
+    this.showModal = true;
   }
 }

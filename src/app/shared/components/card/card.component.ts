@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,5 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input() data: any = [];
+  @Input() data: any = undefined;
+  @Input() onModal = false;
+  @Output() selectItem = new EventEmitter();
+  @Output() closeModal = new EventEmitter();
 }

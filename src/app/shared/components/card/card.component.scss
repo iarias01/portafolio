@@ -1,6 +1,26 @@
 @import "../../../../styles.scss";
 
+.button {
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 4, 4, 1) 0%,
+    rgba(49, 62, 68, 1) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
 .card {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +32,21 @@
   padding: 14px;
   margin: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  animation: fadeIn_size ease 2s;
+  &--on-modal {
+    width: 100% !important;
+    height: auto;
+    max-width: 1360px;
+    border-radius: none;
+    box-shadow: none;
+    animation: fadeIn_size ease 0.5s;
+    .card__img {
+      width: calc(100% + 28px);
+      height: auto !important;
+    }
+  }
+  &--animation {
+    animation: fadeIn_size ease 2s;
+  }
   &__img {
     width: calc(100% + 28px);
     margin-top: -14px;
@@ -20,20 +54,7 @@
     height: 130px;
   }
   &__btn {
-    background: linear-gradient(
-      180deg,
-      rgba(3, 4, 4, 1) 0%,
-      rgba(49, 62, 68, 1) 100%
-    );
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-    &:hover {
-      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    }
+    @extend .button;
   }
   &__title {
     font-size: 20px;
@@ -44,6 +65,20 @@
     margin: auto;
     margin-bottom: 20px;
     font-size: 14px;
+  }
+}
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 5px 15px;
+  }
+  .btn-close {
+    @extend .button;
+    background: white !important;
+    color: #222 !important;
+    border: solid 1px #222;
   }
 }
 
@@ -57,6 +92,9 @@
       margin: auto;
       margin-bottom: 10px;
       font-size: 13px;
+    }
+    &--on-modal {
+      width: 100%;
     }
   }
 }
