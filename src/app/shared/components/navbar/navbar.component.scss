@@ -25,10 +25,13 @@
 }
 
 .menu {
-  width: 100px;
+  * {
+    text-align: left !important;
+  }
+  width: 90px;
   position: absolute;
   top: 60px;
-  left: -100px;
+  left: -90px;
   transition: all 0.4s;
   z-index: 1;
   background: linear-gradient(
