@@ -34,7 +34,7 @@
     "title": "Curriculum vitae",
     "preview": "cv.png",
     "sample": "cv.png",
-    "is_responsive": false,
+    "is_responsive": true,
     "preview_description": "My resume.",
     "description": "My CV made with HTML5 and then exported to pdf with the 'fireshot' browser extension.",
     "tecnologys": "HTML5:CSS3:JS"
