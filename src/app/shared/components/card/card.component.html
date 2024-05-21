@@ -25,8 +25,10 @@
   <button class="card__btn" *ngIf="!onModal" (click)="selectItem.emit(data)">
     Read more
   </button>
-  <div class="actions" *ngIf="onModal && data.link">
-    <a class="card__btn" [href]="data.link" target="_blank">Visit website</a>
+  <div class="actions" *ngIf="onModal">
+    <a *ngIf="data.link" class="card__btn" [href]="data.link" target="_blank"
+      >Visit website</a
+    >
     <a
       class="btn-close"
       (click)="closeModal.emit()"
