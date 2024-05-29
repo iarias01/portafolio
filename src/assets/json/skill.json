@@ -4,6 +4,14 @@
     "icon": "angular.png"
   },
   {
+    "name": "VueJS 3",
+    "icon": "vue.png"
+  },
+  {
+    "name": "ReactJS",
+    "icon": "react.png"
+  },
+  {
     "name": "NGINX Server",
     "icon": "nginx.png"
   },
@@ -18,10 +26,6 @@
   {
     "name": "GNU Bash",
     "icon": "bash.png"
-  },
-  {
-    "name": "React",
-    "icon": "react.png"
   },
   {
     "name": "FireBase",
