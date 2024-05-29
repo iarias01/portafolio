@@ -1,0 +1,21 @@
+<div class="slider">
+  <div
+    class="item"
+    *ngFor="let item of items; let index = index"
+    [ngStyle]="getItemStyles(index)"
+  >
+    <ng-container
+      [ngTemplateOutlet]="templateHtml"
+      [ngTemplateOutletContext]="{
+        item: item,
+        index: index
+      }"
+    ></ng-container>
+  </div>
+  <button id="prev" (click)="prev()">
+    <i class="fa-solid fa-angles-left"></i>
+  </button>
+  <button id="next" (click)="next()">
+    <i class="fa-solid fa-angles-right"></i>
+  </button>
+</div>

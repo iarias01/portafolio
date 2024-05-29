@@ -3,11 +3,18 @@
 <app-navbar></app-navbar>
 <section class="projects containers" id="section_portafolio">
   <h1 class="titles">Portafolio</h1>
+  <app-new-slider
+    [items]="portafolios"
+    [templateHtml]="templateCards"
+  ></app-new-slider>
+</section>
+<!-- <section class="projects containers" id="section_portafolio">
+  <h1 class="titles">Portafolio</h1>
   <app-slider
     [elements]="portafolios"
     [templateHtml]="templateCards"
   ></app-slider>
-</section>
+</section> -->
 <section class="skills containers" id="section_skills">
   <h1 class="titles">Skills</h1>
   <div class="container-skills">

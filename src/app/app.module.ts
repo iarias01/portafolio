@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from './shared/components/card/card.module';
 import { SliderModule } from './shared/components/slider/slider.module';
 import { ModalModule } from './shared/components/modal/modal.module';
+import { NewSliderModule } from './shared/components/new-slider/new-slider.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { ModalModule } from './shared/components/modal/modal.module';
     CardModule,
     SliderModule,
     ModalModule,
+    NewSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,55 @@
+.slider {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+}
+.item {
+  position: absolute;
+  left: calc(50% - 110px);
+  top: 0;
+  width: 300px;
+  height: 320px;
+  text-align: justify;
+  background: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+}
+#next {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  z-index: 1;
+}
+#prev {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  z-index: 1;
+}
+#prev,
+#next {
+  color: #222;
+  background: none;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+#prev:hover,
+#next:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  //$breackpoint-table
+
+  #next,
+  #prev {
+    font-size: 25px;
+  }
+}
