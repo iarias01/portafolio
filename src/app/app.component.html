@@ -41,6 +41,21 @@
         />
         <label class="activity__name">{{ item.name }}</label>
       </div>
+      <!-- <ng-template #templateActivities let-item="item">
+        <div class="activity">
+          <img
+            class="activity__img"
+            [src]="'./assets/img/activities/' + item.icon"
+            [alt]="item.icon"
+          />
+          <label class="activity__name">{{ item.name }}</label>
+        </div>
+      </ng-template>
+
+      <app-slider
+        [elements]="activities"
+        [templateHtml]="templateActivities"
+      ></app-slider> -->
     </div>
   </section>
   <footer class="footer containers" id="footer_contact">

@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .slider {
   position: relative;
   margin-top: 10px;
@@ -45,9 +47,10 @@
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  //$breackpoint-table
-
+@media (max-width: $breackpoint-table) {
+  .item {
+    left: calc(50% - 125px);
+  }
   #next,
   #prev {
     font-size: 25px;
