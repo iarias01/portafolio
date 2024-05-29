@@ -31,7 +31,7 @@
   width: 90px;
   position: absolute;
   top: 60px;
-  left: -90px;
+  right: -90px;
   transition: all 0.4s;
   z-index: 1;
   background: linear-gradient(
@@ -43,7 +43,7 @@
     display: none;
   }
   &--show {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -113,9 +113,27 @@
     background-color: #ddd;
   }
 }
+
+.profile-mobile {
+  display: none;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
+  &__img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    clip-path: circle(50% at 50% 50%);
+  }
+}
+
 @media (max-width: $breackpoint-cel) {
   .btn_toggle {
     display: block;
+  }
+
+  .options {
+    flex-direction: row-reverse;
   }
   .component {
     display: none;

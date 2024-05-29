@@ -1,8 +1,15 @@
-<nav class="navigation">
+<nav class="navigation" id="navbar">
   <div class="options" id="options">
     <button class="btn_toggle" (click)="showMenu = !showMenu">
       <i class="fa-solid fa-bars"></i>
     </button>
+    <div class="profile-mobile" id="my_name">
+      <img class="profile-mobile__img" src="./assets/img/yo.PNG" alt="" />
+      <div class="profile-mobile__text">
+        <h1>Ignacio Arias</h1>
+        <p>Web Developer</p>
+      </div>
+    </div>
     <div class="component">
       <ng-container *ngTemplateOutlet="links"></ng-container>
     </div>

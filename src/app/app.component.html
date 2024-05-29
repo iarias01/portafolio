@@ -1,104 +1,106 @@
-<app-banner></app-banner>
+<div id="body">
+  <app-banner></app-banner>
 
-<app-navbar></app-navbar>
-<section class="projects containers" id="section_portafolio">
-  <h1 class="titles">Portafolio</h1>
-  <app-new-slider
-    [items]="portafolios"
-    [templateHtml]="templateCards"
-  ></app-new-slider>
-</section>
-<!-- <section class="projects containers" id="section_portafolio">
+  <app-navbar></app-navbar>
+  <section class="projects containers" id="section_portafolio">
+    <h1 class="titles">Portafolio</h1>
+    <app-new-slider
+      [items]="portafolios"
+      [templateHtml]="templateCards"
+    ></app-new-slider>
+  </section>
+  <!-- <section class="projects containers" id="section_portafolio">
   <h1 class="titles">Portafolio</h1>
   <app-slider
     [elements]="portafolios"
     [templateHtml]="templateCards"
   ></app-slider>
 </section> -->
-<section class="skills containers" id="section_skills">
-  <h1 class="titles">Skills</h1>
-  <div class="container-skills">
-    <div class="skill" *ngFor="let item of skills">
-      <img
-        class="skill__img"
-        [src]="'./assets/img/skills/' + item.icon"
-        [alt]="item.icon"
-      />
-      <label class="skill__name">{{ item.name }}</label>
+  <section class="skills containers" id="section_skills">
+    <h1 class="titles">Skills</h1>
+    <div class="container-skills">
+      <div class="skill" *ngFor="let item of skills">
+        <img
+          class="skill__img"
+          [src]="'./assets/img/skills/' + item.icon"
+          [alt]="item.icon"
+        />
+        <label class="skill__name">{{ item.name }}</label>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="activities containers" id="section_activities">
-  <h1 class="titles">Activities</h1>
-  <div class="container-activities">
-    <div class="activity" *ngFor="let item of activities">
-      <img
-        class="activity__img"
-        [src]="'./assets/img/activities/' + item.icon"
-        [alt]="item.icon"
-      />
-      <label class="activity__name">{{ item.name }}</label>
+  <section class="activities containers" id="section_activities">
+    <h1 class="titles">Activities</h1>
+    <div class="container-activities">
+      <div class="activity" *ngFor="let item of activities">
+        <img
+          class="activity__img"
+          [src]="'./assets/img/activities/' + item.icon"
+          [alt]="item.icon"
+        />
+        <label class="activity__name">{{ item.name }}</label>
+      </div>
     </div>
-  </div>
-</section>
-<footer class="footer containers" id="footer_contact">
-  <div class="footer-container" id="contacts">
-    <div>
-      <p>
-        <a target="_blank" href="mailto:iariasdev1@gmail.com">
-          <i class="fa-regular fa-envelope"></i> Mail
-        </a>
-      </p>
-      <p>
-        <a
-          target="_blank"
-          href="https://api.whatsapp.com/send?phone=541167997544"
-        >
-          <i class="fa-brands fa-whatsapp"></i> Whatsapp
-        </a>
-      </p>
-      <p>
-        <a target="_blank" href="https://www.linkedin.com/in/iarias89/">
-          <i class="fa-brands fa-linkedin-in"></i> Linkedin
-        </a>
-      </p>
-      <p>
-        <a target="_blank" href="tel:+5491167997544">
-          <i class="fa-solid fa-phone"></i> +5491167997544
-        </a>
-      </p>
+  </section>
+  <footer class="footer containers" id="footer_contact">
+    <div class="footer-container" id="contacts">
+      <div>
+        <p>
+          <a target="_blank" href="mailto:iariasdev1@gmail.com">
+            <i class="fa-regular fa-envelope"></i> Mail
+          </a>
+        </p>
+        <p>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=541167997544"
+          >
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp
+          </a>
+        </p>
+        <p>
+          <a target="_blank" href="https://www.linkedin.com/in/iarias89/">
+            <i class="fa-brands fa-linkedin-in"></i> Linkedin
+          </a>
+        </p>
+        <p>
+          <a target="_blank" href="tel:+5491167997544">
+            <i class="fa-solid fa-phone"></i> +5491167997544
+          </a>
+        </p>
+      </div>
+      <div>
+        <img class="perfil-img" src="./assets/img/yo.PNG" alt="perfil-img" />
+      </div>
     </div>
-    <div>
-      <img class="perfil-img" src="./assets/img/yo.PNG" alt="perfil-img" />
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<ng-template #templateCards let-item="item">
-  <app-card
-    class="project"
-    [data]="item"
-    (selectItem)="setItem($event)"
-  ></app-card>
-</ng-template>
+  <ng-template #templateCards let-item="item">
+    <app-card
+      class="project"
+      [data]="item"
+      (selectItem)="setItem($event)"
+    ></app-card>
+  </ng-template>
 
-<ng-template #templateModal>
-  <app-card
-    class="project"
-    [data]="item"
-    [onModal]="true"
-    style="width: 100%"
-    (closeModal)="showModal = false"
-  ></app-card>
-</ng-template>
+  <ng-template #templateModal>
+    <app-card
+      class="project"
+      [data]="item"
+      [onModal]="true"
+      style="width: 100%"
+      (closeModal)="showModal = false"
+    ></app-card>
+  </ng-template>
 
-<app-modal
-  [showModal]="showModal"
-  [template]="templateModal"
-  [isCloseable]="false"
-  [removeBackground]="true"
-  [size]="sizeModal.MEDIUM"
-  (clickClose)="showModal = false"
->
-</app-modal>
+  <app-modal
+    [showModal]="showModal"
+    [template]="templateModal"
+    [isCloseable]="false"
+    [removeBackground]="true"
+    [size]="sizeModal.MEDIUM"
+    (clickClose)="showModal = false"
+  >
+  </app-modal>
+</div>
