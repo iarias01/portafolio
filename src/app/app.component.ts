@@ -47,7 +47,7 @@ export class AppComponent implements AfterViewInit {
 
     if (container && my_name) {
       container.addEventListener('scroll', () => {
-        if (container.scrollTop > 200) {
+        if (container.scrollTop > 300) {
           my_name.style.display = 'flex';
         } else {
           my_name.style.display = 'none';
