@@ -59,6 +59,9 @@
     justify-content: center;
     color: white;
     margin: 10px 15px;
+    &__name {
+      font-family: "Roboto-Regular", sans-serif;
+    }
     &__img {
       width: 80px;
       margin-bottom: 10px;
