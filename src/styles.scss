@@ -3,6 +3,26 @@
   src: url("./assets/fonts/Sansation_Regular.ttf") format("opentype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Astonpoliz";
+  src: url("./assets/fonts/Astonpoliz.ttf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "TrajanusBricks";
+  src: url("./assets/fonts/TrajanusBricks.ttf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "VIKING";
+  src: url("./assets/fonts/JAi_____.ttf") format("opentype");
+  font-display: swap;
+}
 
 $breackpoint-table: 1024px;
 $breackpoint-cel: 768px;
@@ -14,7 +34,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Sansation_Regular", sans-serif;
+  font-family: "Astonpoliz", "Roboto-Regular", sans-serif;
 }
 
 @keyframes fadeIn {
